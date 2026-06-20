@@ -5,7 +5,7 @@ OCellInversePSO/
 │   ├── soil_profile.yaml
 │   └── targets.yaml
 ├── data/
-│   ├── field/                  # place ocell_measurements.xlsx here
+│   ├── field/                  # place ocell_upper_plate.csv and ocell_lower_plate.csv here
 │   └── models/                 # place OCell_base.p3d here
 ├── core/
 │   ├── __init__.py

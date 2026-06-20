@@ -28,7 +28,7 @@ The best entry point for understanding the repository is:
 ## Quick start
 
 1. Create the Python environment from `environment.yml` or `requirements.txt`.
-2. Place the field workbook at `data/field/ocell_measurements.xlsx`.
+2. Place the field CSVs at `data/field/ocell_upper_plate.csv` and `data/field/ocell_lower_plate.csv`.
 3. Place the PLAXIS base model at `data/models/OCell_base.p3d`.
 4. Update `config/project.yaml` with your PLAXIS connection settings.
 5. Review the soil parameter bounds in `config/soil_profile.yaml`.

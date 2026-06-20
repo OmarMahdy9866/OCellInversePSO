@@ -235,7 +235,8 @@ Defines how field data is compared against model output:
 
 ### Inputs
 
-- field workbook at `data/field/ocell_measurements.xlsx`
+- field CSVs at `data/field/ocell_upper_plate.csv` and
+  `data/field/ocell_lower_plate.csv`
 - PLAXIS model at `data/models/OCell_base.p3d`
 - YAML configuration files in `config/`
 

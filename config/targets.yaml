@@ -1,14 +1,13 @@
 field_data:
-  path: "./data/field/ocell_measurements.xlsx"
-  sheets:
-    upper: "Upper_Plate"
-    lower: "Lower_Plate"
+  csv_files:
+    upper: "./data/field/ocell_upper_plate.csv"
+    lower: "./data/field/ocell_lower_plate.csv"
   columns:
     load: "Load"
     displacement: "Displacement"
   units:
     load: kN
-    displacement: mm
+    displacement: m
 
 metric:
   primary: nrmse                 # 'nrmse' | 'rmse' | 'mae' | 'huber' | 'log_likelihood'

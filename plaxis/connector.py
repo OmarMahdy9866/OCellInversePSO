@@ -41,4 +41,7 @@ class PlaxisConnector:
         if self.s_i is not None:
             try: self.s_i.close()
             except Exception: pass
+        if self.s_o is not None:
+            try: self.s_o.close()
+            except Exception: pass
         self._opened = False
