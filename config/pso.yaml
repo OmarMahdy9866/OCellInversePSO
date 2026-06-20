@@ -1,0 +1,40 @@
+algorithm:
+  flavor: pso                    # 'pso' | 'igt_pso'
+
+swarm:
+  size: 12
+  init: lhs                      # 'lhs' | 'random'
+
+iterations:
+  max: 50
+  early_stop:
+    enabled: true
+    patience: 10
+    min_delta: 1.0e-4
+
+budget_preset: custom            # 'overnight'(12h) | 'weekend'(48h) | 'holiday'(168h) | 'custom'
+
+dynamics:
+  inertia:
+    w_start: 0.9
+    w_end: 0.4
+    schedule: linear
+  c1: 2.0
+  c2: 2.0
+  v_max_frac: 0.5
+
+constraint_handling:
+  bounds: reflect                # 'reflect' | 'clamp' | 'resample'
+  physical: project              # 'project' | 'penalize' | 'reject'
+
+caching:
+  enabled: true
+  tolerance: 1.0e-6
+
+checkpoint:
+  every_iter: true
+
+warm_to_tight:
+  enabled: false
+  switch_iter: 20
+  contract_factor: 0.3

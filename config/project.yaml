@@ -1,0 +1,45 @@
+project:
+  name: OCellInversePSO
+  run_name: "test_run_001"
+  root_dir: "./runs"
+  description: "PSO inverse analysis of HSS params from O-Cell field data"
+
+plaxis:
+  exe_path: "C:/Program Files/Bentley/Geotechnical/PLAXIS 3D 2024/Plaxis3DXInput.exe"
+  scripting_port_input: 10000
+  scripting_port_output: 10001
+  password: "REPLACE_WITH_PASSWORD"
+  base_model: "./data/models/OCell_base.p3d"
+  phase_names:                  # ordered list, mirrors field branches
+    - "Loading"
+    - "Unloading"
+
+ocell:                       # ⭐ NEW — O-Cell-specific parameters
+  maxLoad: 53.2              # jack capacity used for SumMstage scaling
+  upper_node:
+    by: index                # 'index' | 'coord' | 'name'
+    value: 1
+  lower_node:
+    by: index
+    value: 0
+  # Alternative (recommended once you know the coordinates):
+  # upper_node: {by: coord, value: [0.0, 0.0, -28.5], tol: 0.05}
+  # lower_node: {by: coord, value: [0.0, 0.0, -29.5], tol: 0.05}
+
+output:
+  save_model:
+    top_k: 10
+    every_n: 25
+    on_failure: true
+    max_disk_gb: 50
+  save_diagnostic_png_every_run: true
+
+resilience:
+  restart_plaxis_every_n_runs: 50
+  heartbeat: true
+  timeout_min_per_run: 45        # ~3x your 15-min nominal
+
+reproducibility:
+  seed: 42
+  log_git_hash: true
+  log_env: true

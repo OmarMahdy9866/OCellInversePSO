@@ -1,0 +1,45 @@
+# ============================================================
+# OCellInversePSO — Python dependencies
+# Tested with Python 3.10 / 3.11 on Windows + Linux
+# ============================================================
+
+# --- Core scientific stack ---
+numpy>=1.24,<2.2
+scipy>=1.11,<1.15
+pandas>=2.0,<2.3
+
+# --- Plotting / visualization ---
+matplotlib>=3.7,<3.10
+seaborn>=0.13,<0.14            # optional, for nicer identifiability plots
+
+# --- I/O ---
+openpyxl>=3.1                  # Excel reader for field XLSX (two sheets)
+pyyaml>=6.0                    # YAML config parsing
+tqdm>=4.66                     # progress bars
+
+# --- Notebook environment ---
+jupyterlab>=4.0
+ipykernel>=6.25
+ipywidgets>=8.1
+
+# --- PLAXIS Remote Scripting client ---
+# NOTE: Bentley ships plxscripting with PLAXIS. If pip-install fails,
+# point pip to: "C:/Program Files/Bentley/Geotechnical/PLAXIS 3D 2024/python/plxscripting"
+plxscripting
+
+# --- Live dashboard (Phase 3) ---
+streamlit>=1.32
+plotly>=5.18                   # interactive plots for the dashboard
+watchdog>=3.0                  # filesystem watching for live refresh
+
+# --- Identifiability + UQ (Phase 4) ---
+scikit-learn>=1.3              # GP surrogate for Sobol
+SALib>=1.4                     # Sobol / Morris sensitivity analysis
+emcee>=3.1                     # MCMC sampler for posterior
+arviz>=0.17                    # diagnostics & posterior viz
+corner>=2.2                    # corner plots for posteriors
+
+# --- Quality of life ---
+rich>=13.7                     # pretty terminal logging
+loguru>=0.7                    # structured logging
+joblib>=1.3                    # caching utilities

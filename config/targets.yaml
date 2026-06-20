@@ -1,0 +1,50 @@
+field_data:
+  path: "./data/field/ocell_measurements.xlsx"
+  sheets:
+    upper: "Upper_Plate"
+    lower: "Lower_Plate"
+  columns:
+    load: "Load"
+    displacement: "Displacement"
+  units:
+    load: kN
+    displacement: mm
+
+metric:
+  primary: nrmse                 # 'nrmse' | 'rmse' | 'mae' | 'huber' | 'log_likelihood'
+  store_all: true                # compute & store every metric regardless
+
+weights:
+  upper: 0.5
+  lower: 0.5
+  branches: equal                # 'equal' or list of floats matching branch count
+
+initial_stiffness_term:
+  enabled: false
+  fraction: 0.25
+  weight: 0.5
+
+interpolation:
+  method: pchip                  # 'pchip' | 'akima' | 'linear'
+
+branch_detection:
+  smoothing:
+    method: savgol               # 'savgol' | 'none'
+    window: auto                 # auto = max(5, odd(N/50))
+    polyorder: 2
+  thresholds:
+    min_amplitude_pct: 2.0
+    min_branch_points: 3
+    persistence_window: 2
+  validation:
+    require_plaxis_match: true
+    on_mismatch: raise           # 'raise' | 'warn' | 'auto_retry'
+  diagnostic:
+    save_detection_plot: true
+
+failure:
+  penalty_strategy: both         # 'soft' | 'hard' | 'both'
+  soft_penalty_kappa: 1.5
+  hard_reject_after: 3
+  coverage_threshold: 0.95
+  timeout_action: penalize
