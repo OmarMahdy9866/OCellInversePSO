@@ -25,7 +25,8 @@ def run_staged_phases(plx, phase_names: List[str], timeout_min: int,
                 # find or skip InitialPhase (always pre-run)
                 phase = _phase_by_name(g, ph_name)
                 if ph_name.lower() != "initialphase":
-                    g.calculate(phase)
+                    g.setcurrentphase(phase)
+                    g.calculate()
                 if not phase_converged(phase) and ph_name.lower() != "initialphase":
                     info["partial"] = True
                     info["errors"].append(f"Non-convergence: {ph_name}")

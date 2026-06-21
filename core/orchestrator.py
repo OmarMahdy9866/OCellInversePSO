@@ -223,11 +223,18 @@ class Orchestrator:
                 timeout_min=self.project["resilience"]["timeout_min_per_run"],
                 log_path=run_sub / "plaxis.log",
             )
-            predicted = extract_ocell_results(
-                self.plx,
-                phase_names=phase_names,
-                ocell_cfg=self.project["ocell"],
-            )
+            completed_phases = [
+                name
+                for name in run_log.get("phases_run", [])
+                if str(name).lower() != "initialphase"
+            ]
+            if completed_phases:
+                self.plx.open_output_view(run_log.get("last_phase"))
+                predicted = extract_ocell_results(
+                    self.plx,
+                    phase_names=completed_phases,
+                    ocell_cfg=self.project["ocell"],
+                )
             if run_log.get("partial"):
                 status = "partial"
                 fail_info = run_log

@@ -1,0 +1,114 @@
+﻿##~ running Plaxis3DInput.exe 2024.3.0.95
+_setproperties "Title" "" "Company" "" "Comments" "" "UnitForce" "kN" "UnitLength" "m" "UnitTime" "day" "WaterWeight" 10 "ReferenceTemperature" 293.15 "LiquidSpecificHeatCapacity" 4181.3 "LiquidThermalConductivity" 0.0006 "LiquidLatentHeat" 334000 "LiquidThermalExpansion" 0.00021 "LiquidTemperature" 293.15 "IceSpecificHeatCapacity" 2108 "IceThermalConductivity" 0.00222 "IceThermalExpansion" 5E-5 "VapourSpecificHeatCapacity" 1930 "VapourThermalConductivity" 2.5E-5 "VapourSpecificGasConstant" 461.5 "UseTemperatureDepWaterPropsTable" False "ModelType" "Full" "ElementType" "10-Noded"
+_initializerectangular SoilContour 0 0 12 8
+_setproperties "Title" "" "Company" "Bentley Systems Inc" "Comments" "" "UnitForce" "kN" "UnitLength" "m" "UnitTime" "day" "WaterWeight" 10 "ReferenceTemperature" 293.15 "LiquidSpecificHeatCapacity" 4181.3 "LiquidThermalConductivity" 0.0006 "LiquidLatentHeat" 334000 "LiquidThermalExpansion" 0.00021 "LiquidTemperature" 293.15 "IceSpecificHeatCapacity" 2108 "IceThermalConductivity" 0.00222 "IceThermalExpansion" 5E-5 "VapourSpecificHeatCapacity" 1930 "VapourThermalConductivity" 2.5E-5 "VapourSpecificGasConstant" 461.5 "UseTemperatureDepWaterPropsTable" False "ModelType" "Full" "ElementType" "10-Noded"
+_initializerectangular SoilContour 0 0 10 5
+#
+# Silty Sand
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 14451432 "gammaUnsat" 18 "cRef" 1 "gammaSat" 18 "phi" 30 "Vs" 79.2998205449517 "nu" 0.3 "EOed" 40384.6153846154 "Identification" "Silty Sand"
+# DenseSand
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 15262369 "gammaUnsat" 18 "cRef" 1 "gammaSat" 18 "phi" 40 "Vs" 184.696948981197 "nu" 0.35 "EOed" 271234.567901234 "Identification" "Dense sand" "InterfaceStrengthDetermination" "Rigid"
+# Calcarenite
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 10676870 "gammaUnsat" 19 "cRef" 35 "gammaSat" 19 "phi" 32 "Vs" 248.913428197119 "nu" 0.25 "EOed" 360000 "Identification" "Calcarenite" "InterfaceStrengthDetermination" "Rigid"
+# Sandstone HSSmall
+_soilmat "SoilModel" "HS small" "Colour" 10283244 "G0Ref" 750000 "gamma07" 0.0004 "gammaUnsat" 19 "PowerM" 0 "cRef" 25 "gammaSat" 19 "nuUR" 0.1 "phi" 35 "EOedRef" 200000 "E50Ref" 200000 "Identification" "Sandstone"
+# Calcisiltite HSSmall
+_soilmat "SoilModel" "HS small" "Colour" 16377283 "G0Ref" 1500000 "gamma07" 0.0004 "gammaUnsat" 20 "PowerM" 0 "cRef" 40 "gammaSat" 20 "nuUR" 0.1 "phi" 38 "EOedRef" 500000 "E50Ref" 500000 "Identification" "Calcisiltite"
+# Calcisiltite/Siltstone
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 12509878 "gammaUnsat" 19 "cRef" 38 "gammaSat" 19 "phi" 27 "Vs" 592.532477457654 "nu" 0.25 "EOed" 2040000 "Identification" "Calcisiltite/Siltstone" "InterfaceStrengthDetermination" "Rigid"
+# Mudstone
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 8697318 "gammaUnsat" 19 "cRef" 38 "gammaSat" 19 "phi" 27 "Vs" 592.532477457654 "nu" 0.25 "EOed" 2040000 "Identification" "Mudstone" "InterfaceStrengthDetermination" "Rigid"
+#
+_borehole 0 0
+_set Borehole_1.Head -8
+_soillayer 0
+_set Soillayer_1.Zones[0].Top 2.5
+_set Soillayer_1.Zones[0].Bottom -9.4
+_soillayer 0
+_set Soillayer_2.Zones[0].Bottom -10.9
+_soillayer 0
+_set Soillayer_3.Zones[0].Bottom -14.4
+_soillayer 0
+_set Soillayer_4.Zones[0].Bottom -34.9
+_soillayer 0
+_set Soillayer_5.Zones[0].Bottom -75
+_soillayer 0
+_set Soillayer_6.Zones[0].Bottom -117
+_soillayer 0
+_set Soillayer_7.Zones[0].Bottom -130
+#
+_set Soillayer_1.Soil.Material SiltySand
+_set Soillayer_2.Soil.Material Calcarenite
+_set Soillayer_3.Soil.Material Calcisiltite
+_set Soillayer_4.Soil.Material Sandstone
+_set Soillayer_5.Soil.Material Calcisiltite
+_set Soillayer_6.Soil.Material CalcisiltiteSiltstone
+_set Soillayer_7.Soil.Material Mudstone
+#
+_gotostructures
+#
+# Concrete
+_soilmat "SoilModel" "Linear Elastic" "Colour" 10195330 "DrainageType" "Non-porous" "gammaUnsat" 24 "ERef" 20E6 "nu" 0.2 "Identification" "Concrete"
+_soilmat "SoilModel" "Linear Elastic" "Colour" 8579296 "DrainageType" "Non-porous" "gammaUnsat" 24 "ERef" 20 "nu" 0.2 "Identification" "Concrete Low Stiffness"
+# InterfaceCalcisiltite
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 16377283 "gammaUnsat" 20 "cRef" 400 "gammaSat" 20 "Vs" 485.221598859737 "nu" 0.25 "EOed" 1800000 "Identification" "Interface - Calcisiltite"
+# InterfaceSandstone
+_soilmat "SoilModel" "Mohr-Coulomb" "Colour" 8761992 "gammaUnsat" 19 "cRef" 225 "gammaSat" 19 "Vs" 352.016746013147 "nu" 0.25 "EOed" 720000 "Identification" "Interface - Sandstone"
+#
+_surface 0 0 2.5 1.4 0 2.5 1.4 0.5 2.5 0 0.5 2.5
+_extrude Surfaces[-1] 0 0 -54.3
+_decomposesrf Volumes[-1]
+_posinterface (Surfaces[-2] Surfaces[-3])
+_surfdispl (Surfaces[-2] Surfaces[-3])
+_set Surfaces[-2].SurfaceDisplacement.Displacement_y "Fixed"
+_set Surfaces[-2].SurfaceDisplacement.Displacement_z "Free"
+_set Surfaces[-3].SurfaceDisplacement.Displacement_x "Fixed"
+_set Surfaces[-3].SurfaceDisplacement.Displacement_z "Free"
+_arrayr Surfaces[-7] 2 0 0 -16.5
+_arrayr Surfaces[-8] 2 0 0 -49.2
+_arrayr Surfaces[-9] 2 0 0 -49.7
+_arrayr Surfaces[-10] 2 0 0 -53.8
+_neginterface Surfaces[-1]
+_surfload (Surfaces[-2] Surfaces[-3])
+_set Surfaces[-2].SurfaceLoad.sigz -19000
+_set Surfaces[-3].SurfaceLoad.sigz 19000
+#
+_gotomesh
+#
+# Coarse Mesh
+_set (BoreholeVolume_5_1.CoarsenessFactor BoreholeVolume_4_1.CoarsenessFactor BoreholeVolume_3_1.CoarsenessFactor BoreholeVolume_1_1.CoarsenessFactor BoreholeVolume_2_1.CoarsenessFactor) 0.4
+_mesh "Coarseness" 0.05 "UseEnhancedRefinements" True "EMRGlobalScale" 1.2 "EMRMinElementSize" 0.005 "UseSweptMeshing" False
+#
+_gotostages
+_phase InitialPhase
+_set Model.CurrentPhase Phase_1
+_set Phase_1.Identification "Pile installation"
+_deactivate (Soil_1_Soil_8_1 Soil_2_Soil_8_1 Soil_3_Soil_8_1) Phase_1
+_deactivate (WaterConditions_1_WaterConditions_8_1 WaterConditions_2_WaterConditions_8_1 WaterConditions_3_WaterConditions_8_1) Phase_1
+_activate (SurfaceDisplacement_1_1 SurfaceDisplacement_1_3 SurfaceDisplacement_1_2 SurfaceDisplacement_2_3 SurfaceDisplacement_2_2 SurfaceDisplacement_2_1) Phase_1
+_set (Soil_4_Soil_8_1.Material Soil_5_Soil_8_1.Material Soil_3_Soil_8_2.Material Soil_5_Soil_8_3.Material Soil_5_Soil_8_2.Material) Phase_1 Concrete
+_deactivate (WaterConditions_5_WaterConditions_8_3 WaterConditions_5_WaterConditions_8_2 WaterConditions_5_WaterConditions_8_1 WaterConditions_4_WaterConditions_8_1 WaterConditions_3_WaterConditions_8_2) Phase_1
+_activate (PositiveInterface_1_9 PositiveInterface_2_9 PositiveInterface_2_8 PositiveInterface_1_8 PositiveInterface_1_6 PositiveInterface_2_6 PositiveInterface_2_7 PositiveInterface_1_7 PositiveInterface_1_5 PositiveInterface_2_5 PositiveInterface_1_4 PositiveInterface_2_4) Phase_1
+_activate (NegativeInterface_1_1) Phase_1
+_set (PositiveInterface_2_5.MaterialMode PositiveInterface_1_5.MaterialMode) Phase_1 "Custom"
+_set (PositiveInterface_2_5.Material PositiveInterface_1_5.Material) Phase_1 InterfaceSandstone
+_set (PositiveInterface_2_4.MaterialMode PositiveInterface_1_4.MaterialMode PositiveInterface_2_6.MaterialMode PositiveInterface_1_6.MaterialMode PositiveInterface_2_8.MaterialMode PositiveInterface_1_8.MaterialMode PositiveInterface_1_7.MaterialMode PositiveInterface_2_7.MaterialMode) Phase_1 "Custom"
+_set (PositiveInterface_2_4.Material PositiveInterface_1_4.Material PositiveInterface_2_6.Material PositiveInterface_1_6.Material PositiveInterface_2_8.Material PositiveInterface_1_8.Material PositiveInterface_1_7.Material PositiveInterface_2_7.Material) Phase_1 InterfaceCalcisiltite
+#
+_phase Phase_1
+_set Model.CurrentPhase Phase_2
+_set Phase_2.Identification "Loading"
+_set Phase_2.Deform.ResetDisplacementsToZero True
+_set Soil_5_Soil_8_2.Material Phase_2 ConcreteLowStiffness
+_activate SurfaceLoads Phase_2
+#
+_phase Phase_2
+_set Model.CurrentPhase Phase_3
+_set Phase_3.Identification "Unloading"
+_deactivate SurfaceLoads Phase_3
+#
+selectmeshpoints
+/output addcurvepoint "Node" (0 0 -47.2) 
+/output addcurvepoint "Node" (0 0 -46.7) 
+/output update
+#

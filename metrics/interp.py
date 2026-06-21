@@ -76,13 +76,14 @@ def segment_branches(df: pd.DataFrame, targets_cfg: Dict[str, Any]) -> List[Dict
         if end - start + 1 < cfg["thresholds"]["min_branch_points"]:
             continue
         segment = load_smooth[start : end + 1]
-        if segment.ptp() < min_amp:
+        segment_range = float(np.ptp(segment))
+        if segment_range < min_amp:
             continue
         kind = "loading" if segment[-1] >= segment[0] else "unloading"
         if kind == "loading" and any(b["kind"] == "unloading" for b in branches):
             if branches and branches[-1]["kind"] == "unloading":
                 kind = "reloading"
-        confidence = float(min(1.0, segment.ptp() / (5 * min_amp + 1e-9)))
+        confidence = float(min(1.0, segment_range / (5 * min_amp + 1e-9)))
         branches.append(
             {
                 "kind": kind,

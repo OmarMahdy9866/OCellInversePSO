@@ -5,17 +5,17 @@ from .base import MaterialModel
 
 
 HSS_PLAXIS_KEYS = {
-    "E50_ref":  "E50ref",
-    "Eoed_ref": "EoedRef",
-    "Eur_ref":  "Eurref",
-    "G0_ref":   "G0ref",
-    "m":        "powerm",
+    "E50_ref":  "E50Ref",
+    "Eoed_ref": "EOedRef",
+    "Eur_ref":  "EURRef",
+    "G0_ref":   "G0Ref",
+    "m":        "PowerM",
     "phi":      "phi",
-    "c_ref":    "cref",
+    "c_ref":    "cRef",
     "psi":      "psi",
-    "nu_ur":    "nu",
-    "Rf":       "Rf",
-    "pref":     "pref",
+    "nu_ur":    "nuUR",
+    "Rf":       "RF",
+    "pref":     "pRef",
     "gamma_07": "gamma07",
 }
 
@@ -56,4 +56,6 @@ class HSS(MaterialModel):
             try:
                 plx_material.setproperties(plx_key, float(value))
             except Exception as e:                  # pragma: no cover
+                if "Cannot set read-only property" in str(e):
+                    continue
                 raise RuntimeError(f"PLAXIS rejected {our_key}={value}: {e}") from e

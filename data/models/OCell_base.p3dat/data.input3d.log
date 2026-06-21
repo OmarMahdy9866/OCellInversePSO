@@ -1,0 +1,147 @@
+[Actions]
+Set global coarseness to 6.649
+[AddGeometry]
+Name="Polygon_Volume_1_4_1"
+Name="Polygon_Volume_1_5_1"
+Name="Polygon_Volume_1_4_2"
+Name="Polygon_Volume_1_5_2"
+Name="Polygon_Volume_1_4_3"
+Name="Polygon_Volume_1_5_3"
+Name="Polygon_Volume_1_4_4"
+Name="Polygon_Volume_1_5_4"
+Name="Polygon_Volume_1_4_5"
+Name="Polygon_Volume_1_5_5"
+Name="Polygon_Volume_1_4_6"
+Name="Polygon_Volume_1_5_6"
+Name="Polygon_3_1"
+Name="Polygon_Volume_1_4_7"
+Name="Polygon_Volume_1_5_7"
+Name="Polygon_4_1"
+Name="Polygon_Volume_1_4_8"
+Name="Polygon_Volume_1_5_8"
+Name="Polygon_5_1"
+Name="Polygon_Volume_1_4_9"
+Name="Polygon_Volume_1_5_9"
+Name="BoreholeVolume_1_Volume_1_1"
+Name="BoreholeVolume_1_1"
+Name="BoreholeVolume_2_Volume_1_1"
+Name="BoreholeVolume_2_1"
+Name="BoreholeVolume_3_Volume_1_1"
+Name="BoreholeVolume_3_1"
+Name="BoreholeVolume_3_Volume_1_2"
+Name="BoreholeVolume_4_Volume_1_1"
+Name="BoreholeVolume_4_1"
+Name="BoreholeVolume_5_Volume_1_1"
+Name="BoreholeVolume_5_Volume_1_2"
+Name="BoreholeVolume_5_Volume_1_3"
+Name="BoreholeVolume_5_Volume_1_4"
+Name="BoreholeVolume_5_1"
+Name="BoreholeVolume_6_1"
+Name="BoreholeVolume_7_1"
+Name="Polygon_1_Polygon_Volume_1_1_1"
+Name="Polygon_Volume_1_2_1"
+Name="Polygon_Volume_1_3_1"
+Name="Polygon_Volume_1_2_2"
+Name="Polygon_Volume_1_3_2"
+Name="Polygon_Volume_1_2_3"
+Name="Polygon_Volume_1_3_3"
+Name="Polygon_2_1"
+Name="Polygon_Volume_1_2_4"
+Name="Polygon_Volume_1_3_4"
+Name="Polygon_Volume_1_2_5"
+Name="Polygon_Volume_1_3_5"
+Name="Polygon_Volume_1_2_6"
+Name="Polygon_Volume_1_3_6"
+Name="Polygon_Volume_1_2_7"
+Name="Polygon_Volume_1_3_7"
+Name="Polygon_Volume_1_2_8"
+Name="Polygon_Volume_1_3_8"
+Name="Polygon_Volume_1_2_9"
+Name="Polygon_Volume_1_3_9"
+Name="Polygon_Volume_1_6_1"
+[Actions]
+Set global coarseness for "Polygon_Volume_1_4_1" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_1" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_2" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_2" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_3" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_3" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_4" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_4" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_5" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_5" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_6" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_6" to 3.324
+Set global coarseness for "Polygon_3_1" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_7" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_7" to 3.324
+Set global coarseness for "Polygon_4_1" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_8" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_8" to 3.324
+Set global coarseness for "Polygon_5_1" to 3.324
+Set global coarseness for "Polygon_Volume_1_4_9" to 3.324
+Set global coarseness for "Polygon_Volume_1_5_9" to 3.324
+Set global coarseness for "BoreholeVolume_1_1" to 2.659
+Set global coarseness for "BoreholeVolume_2_1" to 2.659
+Set global coarseness for "BoreholeVolume_3_1" to 2.659
+Set global coarseness for "BoreholeVolume_4_1" to 2.659
+Set global coarseness for "BoreholeVolume_5_1" to 2.659
+[AddFeature]
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_3", Geometry="Polygon_Volume_1_4_3", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_3", Geometry="Polygon_Volume_1_4_3", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_3", Geometry="Polygon_Volume_1_5_3", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_3", Geometry="Polygon_Volume_1_5_3", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_1", Geometry="Polygon_Volume_1_4_1", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_1", Geometry="Polygon_Volume_1_4_1", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_1", Geometry="Polygon_Volume_1_5_1", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_1", Geometry="Polygon_Volume_1_5_1", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="Polygon_3_1", Geometry="Polygon_3_1", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_7", Geometry="Polygon_Volume_1_4_7", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_7", Geometry="Polygon_Volume_1_4_7", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_7", Geometry="Polygon_Volume_1_5_7", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_7", Geometry="Polygon_Volume_1_5_7", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="Polygon_4_1", Geometry="Polygon_4_1", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_8", Geometry="Polygon_Volume_1_4_8", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_8", Geometry="Polygon_Volume_1_4_8", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_8", Geometry="Polygon_Volume_1_5_8", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_8", Geometry="Polygon_Volume_1_5_8", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="NegativeInterfaceFor_Polygon_5_1", Geometry="Polygon_5_1", Direction="ffddNegativeNormal"
+ConstructingFeature(Name="Polygon_5_1", Geometry="Polygon_5_1", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_9", Geometry="Polygon_Volume_1_4_9", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_9", Geometry="Polygon_Volume_1_4_9", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_9", Geometry="Polygon_Volume_1_5_9", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_9", Geometry="Polygon_Volume_1_5_9", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_1_Volume_1_1", Geometry="BoreholeVolume_1_Volume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_1_1", Geometry="BoreholeVolume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_2_Volume_1_1", Geometry="BoreholeVolume_2_Volume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_2", Geometry="Polygon_Volume_1_4_2", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_2", Geometry="Polygon_Volume_1_4_2", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_2", Geometry="Polygon_Volume_1_5_2", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_2", Geometry="Polygon_Volume_1_5_2", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_4", Geometry="Polygon_Volume_1_4_4", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_4", Geometry="Polygon_Volume_1_4_4", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_4", Geometry="Polygon_Volume_1_5_4", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_4", Geometry="Polygon_Volume_1_5_4", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_2_1", Geometry="BoreholeVolume_2_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_3_Volume_1_1", Geometry="BoreholeVolume_3_Volume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_3_1", Geometry="BoreholeVolume_3_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_3_Volume_1_2", Geometry="BoreholeVolume_3_Volume_1_2", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_4_Volume_1_1", Geometry="BoreholeVolume_4_Volume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_4_1", Geometry="BoreholeVolume_4_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_5_Volume_1_1", Geometry="BoreholeVolume_5_Volume_1_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_5_Volume_1_2", Geometry="BoreholeVolume_5_Volume_1_2", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_5_Volume_1_3", Geometry="BoreholeVolume_5_Volume_1_3", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_5_Volume_1_4", Geometry="BoreholeVolume_5_Volume_1_4", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_5_1", Geometry="BoreholeVolume_5_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_6_1", Geometry="BoreholeVolume_6_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+ConstructingFeature(Name="BoreholeVolume_7_1", Geometry="BoreholeVolume_7_1", Shape="fesTetrahedron", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_5", Geometry="Polygon_Volume_1_4_5", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_5", Geometry="Polygon_Volume_1_4_5", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_5", Geometry="Polygon_Volume_1_5_5", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_5", Geometry="Polygon_Volume_1_5_5", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_4_6", Geometry="Polygon_Volume_1_4_6", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_4_6", Geometry="Polygon_Volume_1_4_6", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+FaceDuplication(Name="PositiveInterfaceFor_Polygon_Volume_1_5_6", Geometry="Polygon_Volume_1_5_6", Direction="ffddPositiveNormal"
+ConstructingFeature(Name="Polygon_Volume_1_5_6", Geometry="Polygon_Volume_1_5_6", Shape="fesTriangle", PolynomialOrder=2, Family="fefUndefined"
+[Actions]
+Mesh result written to output file "C:\Users\omars\AppData\Local\Temp\PLAXIS~1\data.IMProOutput"

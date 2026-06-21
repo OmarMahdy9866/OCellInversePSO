@@ -47,8 +47,8 @@ _anchors:
       unit: '-'
 
 layers:
-  - name: Sand_Upper
-    plaxis_material_id: "Sand_HSS_1"
+  - name: Sandstone
+    plaxis_material_id: "Sandstone"
     free: *hss_sand_free
     fixed:
       psi:    {value: 0.0, unit: deg}
@@ -56,8 +56,8 @@ layers:
       Rf:     {value: 0.9, unit: '-'}
       pref:   {value: 100.0, unit: kPa}
 
-  - name: Weak_Rock
-    plaxis_material_id: "Rock_HSS_1"
+  - name: Calcisiltite
+    plaxis_material_id: "Calcisiltite"
     free:
       Eur_ref:
         bounds_tight: [400.0e3, 1.2e6]
@@ -97,7 +97,7 @@ constraints:
     - "Eur_ref >= Eoed_ref"
     - "G0_ref  >= Eur_ref / (2.0 * (1.0 + nu_ur))"
   inter_layer:
-    - "Weak_Rock.phi     >= Sand_Upper.phi"
-    - "Weak_Rock.Eur_ref >= Sand_Upper.Eur_ref"
+    - "Calcisiltite.phi     >= Sandstone.phi"
+    - "Calcisiltite.Eur_ref >= Sandstone.Eur_ref"
 
-ties: []   # e.g. [{param: gamma_07, layers: [Sand_Upper, Weak_Rock]}]
+ties: []   # e.g. [{param: gamma_07, layers: [Sandstone, Calcisiltite]}]

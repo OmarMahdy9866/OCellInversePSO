@@ -5,14 +5,16 @@ project:
   description: "PSO inverse analysis of HSS params from O-Cell field data"
 
 plaxis:
-  exe_path: "C:/Program Files/Bentley/Geotechnical/PLAXIS 3D 2024/Plaxis3DXInput.exe"
+  exe_path: "C:/Program Files/Seequent/PLAXIS 3D 2024/Plaxis3DInput.exe"
   scripting_port_input: 10000
   scripting_port_output: 10001
-  password: "REPLACE_WITH_PASSWORD"
+  password: "E9v3PuTA#6?v4P@s"
   base_model: "./data/models/OCell_base.p3d"
   phase_names:                  # ordered list, mirrors field branches
-    - "Loading"
-    - "Unloading"
+    - "InitialPhase"
+    - "Phase_1"
+    - "Phase_2"
+    - "Phase_3"
 
 ocell:                       # ⭐ NEW — O-Cell-specific parameters
   maxLoad: 53.2              # jack capacity used for SumMstage scaling
